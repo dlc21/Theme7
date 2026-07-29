@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "client-engagement",
+  "name": "Client Engagement",
+  "summary": "Organize outcomes, stakeholders, meetings, and decisions.",
+  "prominence": "secondary",
+  "requiresEmptyDirectory": true,
+  "suggestedHarness": "auto",
+  "initialPanes": ["terminal", "files"],
+  "templateDirectory": "template",
+  "firstAgentPrompt": "Interview the operator about the client outcome, scope, stakeholders, commitments, sensitivities, cadence, and immediate next meeting. Keep customer information minimal and never record secrets. Establish a crisp engagement brief before expanding files.",
+  "additionalAgentPrompt": "Read BRIEF.md, STAKEHOLDERS.md, MEETINGS.md, DECISIONS.md, and AGENTS.md. Summarize the engagement state without exposing sensitive details and ask which client outcome this pane should advance."
+}

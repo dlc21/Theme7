@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "weekly-review",
+  "name": "Weekly Review",
+  "summary": "A small weekly reflection and planning surface.",
+  "prominence": "secondary",
+  "requiresEmptyDirectory": true,
+  "suggestedHarness": "auto",
+  "initialPanes": ["terminal", "files"],
+  "templateDirectory": "template",
+  "firstAgentPrompt": "Interview the operator about wins, unfinished commitments, learning, and next week's outcomes. Propose updates, then wait for approval before writing.",
+  "additionalAgentPrompt": "Read REVIEW.md and ask which part of the weekly review you should help complete."
+}

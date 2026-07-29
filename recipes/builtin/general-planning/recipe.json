@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "general-planning",
+  "name": "General Planning Repo",
+  "summary": "A quiet home for priorities, backlog, notes, and decisions.",
+  "prominence": "primary",
+  "requiresEmptyDirectory": true,
+  "suggestedHarness": "auto",
+  "initialPanes": ["terminal", "files"],
+  "templateDirectory": "template",
+  "firstAgentPrompt": "Help the operator turn this repository into a useful planning system. Interview them about outcomes, time horizon, active commitments, constraints, and what is already in motion. Propose concrete updates to NOW.md and BACKLOG.md, record durable decisions in DECISIONS.md, and keep the structure intentionally small.",
+  "additionalAgentPrompt": "Read README.md, NOW.md, BACKLOG.md, DECISIONS.md, NOTES.md, and AGENTS.md. State what appears active, then help with the operator's current request without inventing a second planning system."
+}

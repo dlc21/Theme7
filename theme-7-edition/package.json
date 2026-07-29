@@ -1,0 +1,13 @@
+{
+  "name": "theme-7",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./server-adapter": "./dist/server-adapter.js",
+    "./session-records": { "types": "./dist/session-records.d.ts", "import": "./dist/session-records.js" }
+  },
+  "files": ["LICENSE", "dist", "edition", "starter"],
+  "scripts": { "test": "node --test test/*.test.mjs" }
+}

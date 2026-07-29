@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "blank",
+  "name": "Blank",
+  "summary": "Start with no files and decide the shape together.",
+  "prominence": "primary",
+  "requiresEmptyDirectory": false,
+  "suggestedHarness": "auto",
+  "initialPanes": ["terminal", "files"],
+  "firstAgentPrompt": "This repository's shape is intentionally undecided. Interview the operator about what they are trying to accomplish, inspect the directory, propose a minimal file tree with a short rationale, and wait for explicit approval before writing files.",
+  "additionalAgentPrompt": "Inspect the current directory and any existing conversation context. Summarize what exists, ask what outcome this pane should own, and do not create a new repository structure without approval."
+}

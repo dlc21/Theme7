@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "personal-project",
+  "name": "Personal Project",
+  "summary": "Keep intent, next actions, notes, and decisions together.",
+  "prominence": "secondary",
+  "requiresEmptyDirectory": true,
+  "suggestedHarness": "auto",
+  "initialPanes": ["terminal", "files"],
+  "templateDirectory": "template",
+  "firstAgentPrompt": "Interview the operator about why this project matters, the desired outcome, time and resource constraints, what has already happened, and the smallest meaningful next milestone. Keep the system light enough that it supports the project instead of becoming the project.",
+  "additionalAgentPrompt": "Read README.md, NOW.md, NOTES.md, DECISIONS.md, and AGENTS.md. Restate the project outcome and ask which bounded next action this pane should own."
+}

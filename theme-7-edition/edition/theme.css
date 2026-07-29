@@ -1,0 +1,240 @@
+/* OMP palette and gradient grammar sourced from https://omp.sh/ on 2026-07-15. */
+[data-distribution="theme-7"] {
+  --omp-magenta: oklch(70% .24 340);
+  --omp-iris: oklch(62% .21 295);
+  --omp-cyan: oklch(81% .14 200);
+  --omp-bg: oklch(94% .006 80);
+  --omp-bg-elev: oklch(96.5% .005 80);
+  --omp-fg: oklch(22% .025 285);
+  --omp-fg-dim: oklch(42% .02 285);
+  --omp-fg-faint: oklch(58% .018 285);
+  --omp-accent: oklch(44% .18 348);
+  --omp-accent-2: oklch(46% .11 218);
+  --omp-gradient: linear-gradient(135deg, var(--omp-magenta) 0%, var(--omp-iris) 45%, var(--omp-cyan) 100%);
+
+  color-scheme: light;
+  --background: var(--omp-bg);
+  --foreground: var(--omp-fg);
+  --primary: var(--omp-accent);
+  --primary-foreground: var(--omp-bg-elev);
+  --secondary: var(--omp-bg-elev);
+  --secondary-foreground: var(--omp-fg);
+  --muted-color: var(--omp-bg-elev);
+  --muted-foreground: var(--omp-fg-dim);
+  --accent: var(--omp-bg-elev);
+  --accent-foreground: var(--omp-fg);
+  --border: oklch(22% .025 285 / 10%);
+  --input: oklch(22% .025 285 / 18%);
+  --ring: var(--omp-cyan);
+  --hud-surface: var(--omp-bg);
+  --hud-rail: var(--omp-bg-elev);
+  --hud-lane-rail: var(--omp-bg);
+}
+
+.dark[data-distribution="theme-7"] {
+  --omp-bg: oklch(13.5% .018 295);
+  --omp-bg-elev: oklch(17.2% .022 295);
+  --omp-fg: oklch(97% .008 90);
+  --omp-fg-dim: oklch(82% .014 285);
+  --omp-fg-faint: oklch(50% .022 290);
+  --omp-accent: var(--omp-magenta);
+  --omp-accent-2: var(--omp-cyan);
+
+  color-scheme: dark;
+  --primary-foreground: oklch(13.5% .018 295);
+  --border: oklch(100% 0 0 / 7%);
+  --input: oklch(100% 0 0 / 14%);
+  --ring: var(--omp-cyan);
+}
+
+[data-distribution="theme-7"] body {
+  background:
+    radial-gradient(ellipse 80vw 60vh at 18% -10%, oklch(44% .18 348 / 4.5%), transparent 60%),
+    radial-gradient(ellipse 70vw 70vh at 110% 30%, oklch(46% .11 218 / 3.5%), transparent 60%),
+    var(--background);
+}
+
+.dark[data-distribution="theme-7"] body {
+  background:
+    radial-gradient(ellipse 80vw 60vh at 18% -10%, oklch(70% .24 340 / 13%), transparent 60%),
+    radial-gradient(ellipse 70vw 70vh at 110% 30%, oklch(81% .14 200 / 9%), transparent 60%),
+    var(--background);
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="product-mark"] {
+  border: 1px solid color-mix(in oklch, var(--omp-accent-2) 30%, transparent);
+  background: var(--omp-bg-elev);
+  box-shadow:
+    0 0 0 1px color-mix(in oklch, var(--omp-accent) 14%, transparent),
+    0 16px 42px -20px color-mix(in oklch, var(--omp-accent) 55%, transparent);
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="agent-card:omp"] {
+  border-color: color-mix(in oklch, var(--omp-accent) 58%, var(--border));
+  background:
+    linear-gradient(145deg, color-mix(in oklch, var(--omp-accent) 14%, transparent), transparent 58%),
+    var(--background);
+  box-shadow: 0 18px 52px -34px color-mix(in oklch, var(--omp-accent) 56%, transparent);
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="agent-card:omp"]:focus-visible {
+  outline-color: var(--omp-accent-2);
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="pane-palette"] {
+  background-image:
+    linear-gradient(180deg, color-mix(in oklch, var(--omp-accent) 7%, transparent), transparent 34%),
+    linear-gradient(90deg, color-mix(in oklch, var(--omp-iris) 4%, transparent), transparent 72%);
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="agent-card:claude-code"] {
+  border-color: color-mix(in oklch, var(--omp-fg-faint) 34%, transparent);
+  isolation: isolate;
+  opacity: 0.58;
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="agent-card:claude-code"] [data-operator-engine-background] {
+  z-index: 0;
+  filter: brightness(0.58) contrast(1.12);
+  opacity: 0.68;
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="agent-card:claude-code"] [data-operator-engine-card-content] {
+  position: relative;
+  z-index: 3;
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="agent-card:claude-code"] [data-operator-engine-card-title] {
+  color: #fff;
+  text-shadow: 0 1px 2px #000, 0 0 5px #000;
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="agent-card:claude-code"] [data-operator-engine-card-description] {
+  color: #c8c2ce;
+  font-weight: 500;
+  text-shadow: 0 1px 2px #000;
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="agent-card:claude-code"] [data-operator-engine-card-badge] {
+  border-color: color-mix(in oklch, var(--omp-accent) 48%, transparent);
+  background: rgb(10 8 14 / 86%);
+  color: #f2edf7;
+  text-shadow: 0 1px 2px #000;
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="agent-card:claude-code"] [data-operator-engine-decoration] {
+  display: none;
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="agent-card:claude-code"]::after {
+  position: absolute;
+  z-index: 1;
+  right: -4px;
+  bottom: -8px;
+  left: -4px;
+  height: 58px;
+  background-image: url("assets/geocities-fire-slow-a.gif"), url("assets/geocities-fire-slow-b.gif"), url("assets/geocities-fire-slow-c.gif");
+  background-position: 1px bottom, center bottom, calc(100% - 1px) bottom;
+  background-repeat: no-repeat;
+  background-size: 40px 45px, 46px 51px, 35px 40px;
+  content: "";
+  image-rendering: pixelated;
+  opacity: 0.82;
+  pointer-events: none;
+}
+
+[data-distribution="theme-7"] [data-operator-engine-slot="onboarding-walkthrough"] {
+  isolation: isolate;
+  border-color: color-mix(in oklch, var(--omp-accent) 24%, var(--border));
+  background:
+    radial-gradient(circle at 10% 0%, color-mix(in oklch, var(--omp-magenta) 6%, transparent), transparent 44%),
+    radial-gradient(circle at 100% 100%, color-mix(in oklch, var(--omp-cyan) 4%, transparent), transparent 40%),
+    var(--background);
+  box-shadow:
+    0 0 0 1px color-mix(in oklch, var(--omp-iris) 8%, transparent),
+    0 24px 64px -36px color-mix(in oklch, var(--omp-magenta) 28%, transparent);
+}
+
+[data-distribution="theme-7"] [data-operator-engine-walkthrough-scene] {
+  animation: omp-walkthrough-scene-in 240ms cubic-bezier(.2, .8, .2, 1) both;
+}
+
+@keyframes omp-walkthrough-scene-in {
+  from { opacity: 0; transform: translate3d(0, 4px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+[data-distribution="theme-7"] [data-terminal-showpiece] {
+  --showpiece-muted: color-mix(in oklch, var(--omp-iris) 38%, transparent);
+  --showpiece-accent: var(--omp-magenta);
+  --showpiece-strong: var(--omp-cyan);
+}
+
+[data-distribution="theme-7"] [data-terminal-showpiece] .showpiece-text-loader {
+  animation: showpiece-fade var(--showpiece-duration) ease-out var(--showpiece-at) both, omp-loader-cursor 620ms steps(1, end) var(--showpiece-at) infinite;
+  paint-order: stroke;
+  stroke: color-mix(in oklch, currentColor 18%, transparent);
+  stroke-width: 5px;
+}
+
+[data-distribution="theme-7"] [data-showpiece-experience="chromatic-aperture"] .showpiece-ring {
+  transform-origin: center;
+  animation-name: omp-aperture;
+}
+
+[data-distribution="theme-7"] [data-showpiece-experience="particle-magnetism"] .terminal-showpiece-field {
+  animation: omp-particle-field var(--showpiece-duration) cubic-bezier(.22, 1, .36, 1) var(--showpiece-at) both;
+}
+
+[data-distribution="theme-7"] [data-showpiece-experience="pixel-bloom"] .showpiece-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-name: omp-pixel-bloom;
+}
+
+[data-distribution="theme-7"] [data-showpiece-experience="signal-decode"] .showpiece-path {
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+[data-distribution="theme-7"] [data-showpiece-experience="type-assembly"] .showpiece-text-display {
+  filter: drop-shadow(0 0 18px currentColor);
+}
+
+[data-distribution="theme-7"] [data-showpiece-experience="prism-strike"] .showpiece-signal {
+  stroke-width: 4;
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+[data-distribution="theme-7"] [data-showpiece-experience="orbital-slingshot"] .showpiece-ring {
+  stroke-dasharray: 7 12;
+  animation: omp-orbit var(--showpiece-duration) linear var(--showpiece-at) both;
+}
+
+[data-distribution="theme-7"] [data-showpiece-experience="liquid-merge"] .showpiece-node {
+  filter: blur(7px) drop-shadow(0 0 24px currentColor);
+  animation-name: omp-liquid;
+}
+
+[data-distribution="theme-7"] [data-showpiece-experience="glyph-rain"] .terminal-showpiece-field {
+  animation: omp-glyph-rain var(--showpiece-duration) linear var(--showpiece-at) both;
+}
+
+[data-distribution="theme-7"] [data-showpiece-experience="mosaic-flip"] .showpiece-node {
+  animation-name: omp-mosaic-flip;
+}
+
+@keyframes omp-loader-cursor { 0%, 48% { opacity: 1; } 49%, 100% { opacity: .42; } }
+@keyframes omp-aperture { from { opacity: 0; transform: scale(.35) rotate(-18deg); } 65% { opacity: .8; } to { opacity: 0; transform: scale(1.2) rotate(0); } }
+@keyframes omp-particle-field { from { opacity: .7; transform: scale(1.2) rotate(4deg); } to { opacity: .12; transform: scale(.72) rotate(0); } }
+@keyframes omp-pixel-bloom { from { opacity: 0; transform: scale(0) rotate(-90deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
+@keyframes omp-orbit { from { opacity: .15; stroke-dashoffset: 1; transform: rotate(-40deg); } to { opacity: .7; stroke-dashoffset: 0; transform: rotate(50deg); } }
+@keyframes omp-liquid { from { opacity: 0; transform: scale(.4); } 75% { opacity: .82; transform: scale(1.12); } to { opacity: .72; transform: scale(1); } }
+@keyframes omp-glyph-rain { from { opacity: 0; transform: translateY(-18%); } 20% { opacity: .65; } to { opacity: .12; transform: translateY(18%); } }
+@keyframes omp-mosaic-flip { from { opacity: 0; transform: scaleX(0); } to { opacity: 1; transform: scaleX(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-distribution="theme-7"] [data-operator-engine-walkthrough-scene] {
+    animation: none;
+    transform: none;
+  }
+}

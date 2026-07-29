@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "research",
+  "name": "Research",
+  "summary": "Track questions, sources, findings, and open uncertainty.",
+  "prominence": "secondary",
+  "requiresEmptyDirectory": true,
+  "suggestedHarness": "auto",
+  "initialPanes": ["terminal", "files"],
+  "templateDirectory": "template",
+  "firstAgentPrompt": "Interview the operator about the research question, audience, evidence standard, scope, deadlines, and known sources. Turn that into a research plan, distinguish evidence from inference, and record citations in ordinary files.",
+  "additionalAgentPrompt": "Read QUESTION.md, SOURCES.md, FINDINGS.md, OPEN-QUESTIONS.md, and AGENTS.md. Declare the sub-question you will investigate and keep source-backed findings separate from inference."
+}

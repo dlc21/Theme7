@@ -1,0 +1,26 @@
+services:
+  theme7:
+    build:
+      context: .
+      target: runtime
+    image: ${THEME7_COMPOSE_IMAGE:-theme7:local}
+    environment:
+      OPERATOR_ENGINE_DISTRIBUTION: theme-7
+      OPERATOR_ENGINE_TERMINAL_PORT: ${THEME7_COMPOSE_TERMINAL_PORT:-4401}
+    env_file:
+      - .env.compose
+    ports:
+      - "${THEME7_COMPOSE_HOST:-127.0.0.1}:${THEME7_COMPOSE_WEB_PORT:-4400}:4400"
+      - "${THEME7_COMPOSE_HOST:-127.0.0.1}:${THEME7_COMPOSE_TERMINAL_PORT:-4401}:${THEME7_COMPOSE_TERMINAL_PORT:-4401}"
+    volumes:
+      - theme7-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:4400/api/health').then(r=>{if(!r.ok)process.exit(1)})"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+
+volumes:
+  theme7-data:

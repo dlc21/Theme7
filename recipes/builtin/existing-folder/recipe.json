@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "existing-folder",
+  "name": "Use Existing Folder Unchanged",
+  "summary": "Keep every existing file exactly as it is.",
+  "prominence": "primary",
+  "requiresEmptyDirectory": false,
+  "suggestedHarness": "auto",
+  "initialPanes": ["terminal", "files"],
+  "firstAgentPrompt": "Inspect this existing folder without changing it. Summarize its purpose, structure, Git state, and any obvious working conventions, then ask the operator what they want to accomplish. Do not write or reorganize files until they answer.",
+  "additionalAgentPrompt": "Read the existing folder and its instructions, summarize the context relevant to this pane, and ask what bounded outcome you should own before making changes."
+}

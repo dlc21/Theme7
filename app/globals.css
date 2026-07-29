@@ -1,0 +1,140 @@
+@import "tailwindcss" source(none);
+
+@source "../app/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../lib/**/*.{js,ts,jsx,tsx,mdx}";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted-color);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-hud-surface: var(--hud-surface);
+  --color-hud-rail: var(--hud-rail);
+  --color-hud-lane-rail: var(--hud-lane-rail);
+}
+
+:root {
+  --omp-magenta: oklch(70% .24 340);
+  --omp-iris: oklch(62% .21 295);
+  --omp-cyan: oklch(81% .14 200);
+  --omp-bg: oklch(94% .006 80);
+  --omp-bg-elev: oklch(96.5% .005 80);
+  --omp-fg: oklch(22% .025 285);
+  --omp-fg-dim: oklch(42% .02 285);
+  --omp-fg-faint: oklch(58% .018 285);
+  --omp-accent: oklch(44% .18 348);
+  --omp-accent-2: oklch(46% .11 218);
+  --omp-gradient: linear-gradient(135deg, var(--omp-magenta) 0%, var(--omp-iris) 45%, var(--omp-cyan) 100%);
+
+  color-scheme: light;
+  --background: var(--omp-bg);
+  --foreground: var(--omp-fg);
+  --primary: var(--omp-accent);
+  --primary-foreground: var(--omp-bg-elev);
+  --secondary: var(--omp-bg-elev);
+  --secondary-foreground: var(--omp-fg);
+  --muted-color: var(--omp-bg-elev);
+  --muted-foreground: var(--omp-fg-dim);
+  --accent: var(--omp-bg-elev);
+  --accent-foreground: var(--omp-fg);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(22% .025 285 / 10%);
+  --input: oklch(22% .025 285 / 18%);
+  --ring: var(--omp-cyan);
+  --hud-surface: var(--omp-bg);
+  --hud-rail: var(--omp-bg-elev);
+  --hud-lane-rail: var(--omp-bg);
+  --bg: var(--background);
+  --panel: var(--hud-surface);
+  --panel-2: var(--secondary);
+  --panel-border: var(--border);
+  --radius: 0.75rem;
+}
+
+.dark {
+  --omp-bg: oklch(13.5% .018 295);
+  --omp-bg-elev: oklch(17.2% .022 295);
+  --omp-fg: oklch(97% .008 90);
+  --omp-fg-dim: oklch(82% .014 285);
+  --omp-fg-faint: oklch(50% .022 290);
+  --omp-accent: var(--omp-magenta);
+  --omp-accent-2: var(--omp-cyan);
+
+  color-scheme: dark;
+  --background: var(--omp-bg);
+  --foreground: var(--omp-fg);
+  --primary: var(--omp-accent);
+  --primary-foreground: oklch(13.5% .018 295);
+  --secondary: var(--omp-bg-elev);
+  --secondary-foreground: var(--omp-fg);
+  --muted-color: var(--omp-bg-elev);
+  --muted-foreground: var(--omp-fg-dim);
+  --accent: var(--omp-bg-elev);
+  --accent-foreground: var(--omp-fg);
+  --border: oklch(100% 0 0 / 7%);
+  --input: oklch(100% 0 0 / 14%);
+  --ring: var(--omp-cyan);
+  --hud-surface: var(--omp-bg);
+  --hud-rail: var(--omp-bg-elev);
+  --hud-lane-rail: var(--omp-bg);
+  --bg: var(--background);
+  --panel: var(--hud-surface);
+  --panel-2: var(--secondary);
+  --panel-border: var(--border);
+}
+
+body {
+  background:
+    radial-gradient(ellipse 80vw 60vh at 18% -10%, oklch(44% .18 348 / 4.5%), transparent 60%),
+    radial-gradient(ellipse 70vw 70vh at 110% 30%, oklch(46% .11 218 / 3.5%), transparent 60%),
+    var(--background);
+}
+
+.dark body {
+  background:
+    radial-gradient(ellipse 80vw 60vh at 18% -10%, oklch(70% .24 340 / 13%), transparent 60%),
+    radial-gradient(ellipse 70vw 70vh at 110% 30%, oklch(81% .14 200 / 9%), transparent 60%),
+    var(--background);
+}
+
+[data-operator-engine-slot="product-mark"] {
+  border: 1px solid color-mix(in oklch, var(--omp-accent-2) 30%, transparent);
+  background: var(--omp-bg-elev);
+  box-shadow:
+    0 0 0 1px color-mix(in oklch, var(--omp-accent) 14%, transparent),
+    0 16px 42px -20px color-mix(in oklch, var(--omp-accent) 55%, transparent);
+}
+
+[data-operator-engine-slot="agent-card:omp"] {
+  border-color: color-mix(in oklch, var(--omp-accent) 58%, var(--border));
+  background:
+    linear-gradient(145deg, color-mix(in oklch, var(--omp-accent) 14%, transparent), transparent 58%),
+    var(--background);
+  box-shadow: 0 18px 52px -34px color-mix(in oklch, var(--omp-accent) 56%, transparent);
+}
+
+[data-operator-engine-slot="agent-card:omp"]:focus-visible {
+  outline-color: var(--omp-accent-2);
+}
+
+[data-operator-engine-slot="pane-palette"] {
+  background-image:
+    linear-gradient(180deg, color-mix(in oklch, var(--omp-accent) 7%, transparent), transparent 34%),
+    linear-gradient(90deg, color-mix(in oklch, var(--omp-iris) 4%, transparent), transparent 72%);
+}

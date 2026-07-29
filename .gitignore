@@ -1,0 +1,51 @@
+# Dependencies and framework output
+node_modules/
+.next/
+.next-*/
+.runtime-surface/
+out/
+release/
+next-env.d.ts
+*.tsbuildinfo
+
+# Local runtime state
+.data/
+.operator-engine/
+fresh-demo-data/
+tmp-data/
+**/client-workspace/
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.log
+
+# Environment and credentials
+.env*
+!.env.example
+**/.env*
+!**/.env.example
+
+# Test, review, and scan output
+playwright-report/
+test-results/
+coverage/
+.nyc_output/
+.test-data/
+.test-data-*/
+.review-data/
+.review-manifests/
+review-manifest*.json
+artifacts/
+*.sarif
+*.sbom.json
+/.acceptance-binaries/
+/*.tgz
+
+# Native launcher output
+scripts/launcher/bin/
+scripts/launcher/obj/
+scripts/launcher/out/
+scripts/launcher/publish/

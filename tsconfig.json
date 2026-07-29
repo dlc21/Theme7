@@ -1,0 +1,91 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    ".next-workshop/types/**/*.ts",
+    ".next-workshop/dev/types/**/*.ts",
+    ".next-browser-4470/types/**/*.ts",
+    ".next-browser-4470/dev/types/**/*.ts",
+    ".next-browser-4480/types/**/*.ts",
+    ".next-browser-4480/dev/types/**/*.ts",
+    ".next-browser-4490/types/**/*.ts",
+    ".next-browser-4490/dev/types/**/*.ts",
+    ".next-browser-4495/types/**/*.ts",
+    ".next-browser-4495/dev/types/**/*.ts",
+    ".next-browser-4497/types/**/*.ts",
+    ".next-browser-4497/dev/types/**/*.ts",
+    ".next-browser-4510/types/**/*.ts",
+    ".next-browser-4510/dev/types/**/*.ts",
+    ".next-browser-4520/types/**/*.ts",
+    ".next-browser-4520/dev/types/**/*.ts",
+    ".next-browser-4530/types/**/*.ts",
+    ".next-browser-4530/dev/types/**/*.ts",
+    ".next-browser-4540/types/**/*.ts",
+    ".next-browser-4540/dev/types/**/*.ts",
+    ".next-browser-4550/types/**/*.ts",
+    ".next-browser-4550/dev/types/**/*.ts",
+    ".next-browser-4560/types/**/*.ts",
+    ".next-browser-4560/dev/types/**/*.ts",
+    ".next-browser-4570/types/**/*.ts",
+    ".next-browser-4570/dev/types/**/*.ts",
+    ".next-browser-4580/types/**/*.ts",
+    ".next-browser-4580/dev/types/**/*.ts",
+    ".next-browser-4590/types/**/*.ts",
+    ".next-browser-4590/dev/types/**/*.ts",
+    ".next-browser-4600/types/**/*.ts",
+    ".next-browser-4600/dev/types/**/*.ts",
+    ".next-browser-4610/types/**/*.ts",
+    ".next-browser-4610/dev/types/**/*.ts",
+    ".next-browser-4620/types/**/*.ts",
+    ".next-browser-4620/dev/types/**/*.ts",
+    ".next-browser-4630/types/**/*.ts",
+    ".next-browser-4630/dev/types/**/*.ts",
+    ".next-browser-4640/types/**/*.ts",
+    ".next-browser-4640/dev/types/**/*.ts",
+    ".next-browser-4650/types/**/*.ts",
+    ".next-browser-4650/dev/types/**/*.ts",
+    ".next-browser-4660/types/**/*.ts",
+    ".next-browser-4660/dev/types/**/*.ts",
+    ".next-webpack-diagnostic/dev/types/**/*.ts",
+    ".next-webpack-diagnostic/dev/dev/types/**/*.ts",
+    ".next/dev/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "client-workspace"
+  ]
+}

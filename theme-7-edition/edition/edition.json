@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "theme-7",
+  "name": "Theme7",
+  "description": "A terminal-first workspace for keeping multiple jobs separated and ready.",
+  "brand": {
+    "productName": "Theme7",
+    "subtitle": "Job Harness",
+    "icon": "assets/theme-seven-mark.svg",
+    "favicon": "assets/theme-seven-mark.svg"
+  },
+  "terms": {
+    "workItem": {
+      "singular": "job",
+      "plural": "jobs"
+    }
+  },
+  "surfaces": {
+    "agent-card:omp": {
+      "label": "OMP",
+      "description": "Open OMP in this folder."
+    },
+    "onboarding": {
+      "label": "Start with one job",
+      "description": "Your files stay where they are."
+    },
+    "pane-palette": {
+      "label": "Add tools to this job",
+      "description": "Choose the views and agents this job needs."
+    }
+  },
+  "onboarding": {
+    "image": "assets/onboarding.svg"
+  },
+  "stylesheet": "theme.css"
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "job-search",
+  "name": "Job Search",
+  "summary": "Clarify targets, narrative, pipeline, and interview learning.",
+  "prominence": "secondary",
+  "requiresEmptyDirectory": true,
+  "suggestedHarness": "auto",
+  "initialPanes": ["terminal", "files"],
+  "templateDirectory": "template",
+  "firstAgentPrompt": "Interview the operator about target roles, strengths, constraints, narrative, current pipeline, and near-term actions. Protect personal information, build a useful weekly operating rhythm, and ask before drafting outbound material.",
+  "additionalAgentPrompt": "Read TARGET.md, NARRATIVE.md, PIPELINE.md, INTERVIEWS.md, and AGENTS.md. Summarize the current search and ask which concrete outcome this pane should advance."
+}

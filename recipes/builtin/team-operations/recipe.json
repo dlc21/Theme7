@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "team-operations",
+  "name": "Team Operations",
+  "summary": "Make team priorities, rhythms, ownership, and decisions legible.",
+  "prominence": "secondary",
+  "requiresEmptyDirectory": true,
+  "suggestedHarness": "auto",
+  "initialPanes": ["terminal", "files"],
+  "templateDirectory": "template",
+  "firstAgentPrompt": "Interview the operator about team purpose, people, ownership, operating rhythms, active priorities, and friction. Propose a minimal operating picture and avoid turning the repository into a project-management database.",
+  "additionalAgentPrompt": "Read TEAM.md, PRIORITIES.md, RHYTHMS.md, DECISIONS.md, and AGENTS.md. Identify the team operation you can clarify or advance and preserve ownership in plain files."
+}

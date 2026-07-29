@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "software-project",
+  "name": "Software Project",
+  "summary": "Capture product intent, architecture, work, and decisions.",
+  "prominence": "secondary",
+  "requiresEmptyDirectory": true,
+  "suggestedHarness": "codex",
+  "initialPanes": ["terminal", "files"],
+  "templateDirectory": "template",
+  "firstAgentPrompt": "Interview the operator about the product, users, constraints, runtime, delivery target, and definition of done. Read NOW.md, README.md, ARCHITECTURE.md, BACKLOG.md, DECISIONS.md, AGENTS.md, .omp/AGENTS.md, and .omp/RULES.md. Propose the smallest useful implementation plan, update NOW.md with the current milestone and next actions, and preserve commands and decisions as ordinary repository knowledge.",
+  "additionalAgentPrompt": "Read NOW.md, README.md, ARCHITECTURE.md, BACKLOG.md, DECISIONS.md, AGENTS.md, .omp/AGENTS.md, and .omp/RULES.md. Restate the active milestone, identify one bounded engineering outcome, and verify the repository's own instructions before editing."
+}

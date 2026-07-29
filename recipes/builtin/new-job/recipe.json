@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "new-job",
+  "name": "New Job",
+  "summary": "Build a living operating repo for a new role.",
+  "prominence": "primary",
+  "requiresEmptyDirectory": true,
+  "suggestedHarness": "auto",
+  "initialPanes": ["terminal", "files"],
+  "templateDirectory": "template",
+  "firstAgentPrompt": "You are helping the operator establish a living work repository for a new job. Begin with a concise interview about the role, mandate, people, systems, rhythms, current priorities, and constraints. Read the starter files, but do not materially expand their structure until you have reflected back what you heard and received approval. Keep durable knowledge in ordinary Markdown files and make small, legible Git-friendly changes.",
+  "additionalAgentPrompt": "Orient yourself by reading README.md, ROLE.md, NOW.md, PEOPLE.md, SYSTEMS.md, RHYTHMS.md, DECISIONS.md, and AGENTS.md. Summarize the current operating context, identify the specific work you can advance, and ask before changing the repository's shape."
+}
